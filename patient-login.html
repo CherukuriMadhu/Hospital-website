@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal | Swathi Hospital Kodad</title>
+    <meta name="description" content="Access your medical reports and appointment history at Swathi Hospital's patient portal. Digital records system coming soon.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            blue: '#1B4F9B',
+                            green: '#27AE60',
+                            red: '#C0392B',
+                        },
+                        navy: {
+                            deep: '#1A1A2E',
+                        },
+                        slate: {
+                            custom: '#6B7280',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-merriweather bg-surface-light min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="w-full z-[1000] py-6 px-6 md:px-12 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                <div class="flex flex-col">
+                    <span class="font-poppins font-bold text-lg md:text-xl text-medical-blue">Swathi Hospital</span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-custom">Kodad · Suryapet</span>
+                </div>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-navy-deep hover:text-medical-blue transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Portal Content -->
+    <main class="flex-grow flex items-center justify-center py-20 px-6">
+        <div class="max-w-md w-full">
+            <!-- Login Card -->
+            <div id="login-section" class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-navy-deep/5 reveal">
+                <div class="text-center mb-10">
+                    <div class="w-20 h-20 bg-medical-blue/10 text-medical-blue rounded-3xl flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fas fa-user-lock"></i>
+                    </div>
+                    <h1 class="text-3xl font-poppins font-bold text-navy-deep mb-2">Patient Login</h1>
+                    <p class="text-slate-custom text-sm">Access your medical records and prescriptions.</p>
+                </div>
+
+                <form id="login-form" class="space-y-6">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Patient ID or Phone</label>
+                        <input type="text" placeholder="E.g. SH-1234 or 9876543210" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" required>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Password / DOB</label>
+                        <input type="password" placeholder="DD-MM-YYYY" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" required>
+                    </div>
+                    <button type="button" onclick="showDashboard()" class="w-full bg-medical-blue text-white font-poppins font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-lg hover:-translate-y-1">Login to Portal</button>
+                    <div class="text-center">
+                        <a href="#" class="text-xs text-medical-blue font-bold hover:underline">Forgot Patient ID?</a>
+                    </div>
+                </form>
+
+                <div class="mt-10 pt-10 border-t border-navy-deep/5 text-center">
+                    <p class="text-[10px] text-slate-custom uppercase tracking-widest mb-4">New Patient?</p>
+                    <a href="appointment.html" class="inline-block border-2 border-medical-blue text-medical-blue px-6 py-2 rounded-lg text-sm font-bold hover:bg-medical-blue hover:text-white transition-all">Register Now</a>
+                </div>
+            </div>
+
+            <!-- Mock Dashboard (Hidden) -->
+            <div id="dashboard-section" class="hidden space-y-8 reveal">
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-navy-deep/5">
+                    <div class="flex justify-between items-start mb-8">
+                        <div>
+                            <h2 class="text-2xl font-poppins font-bold text-navy-deep">Welcome, Patient</h2>
+                            <p class="text-xs text-slate-custom">Patient ID: SH-10245</p>
+                        </div>
+                        <button onclick="window.location.reload()" class="text-medical-red text-xs font-bold uppercase tracking-widest">Logout</button>
+                    </div>
+
+                    <!-- Maintenance Notice -->
+                    <div class="bg-yellow-50 border border-yellow-200 p-6 rounded-2xl flex gap-4 items-start mb-8">
+                        <i class="fas fa-tools text-yellow-600 text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-yellow-800 text-sm mb-1">Digital Records Coming Soon!</h4>
+                            <p class="text-xs text-yellow-700 leading-relaxed">We are currently migrating our medical records to this digital portal. For now, please request your reports via WhatsApp or call our reception.</p>
+                            <div class="flex gap-4 mt-4">
+                                <a href="https://wa.me/917981490850?text=Requesting%20my%20medical%20reports%20for%20Patient%20ID%20SH-10245" class="bg-green-600 text-white px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i> Request via WhatsApp
+                                </a>
+                                <a href="tel:+917981490850" class="bg-navy-deep text-white px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                                    <i class="fas fa-phone-alt"></i> Call Support
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Appointment History Mock -->
+                    <div>
+                        <h3 class="font-poppins font-bold text-navy-deep mb-4 flex items-center gap-2">
+                            <i class="fas fa-history text-medical-blue"></i> Recent Visits
+                        </h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead class="bg-surface-light text-slate-custom uppercase tracking-widest">
+                                    <tr>
+                                        <th class="py-3 px-4 rounded-l-lg">Date</th>
+                                        <th class="py-3 px-4">Doctor</th>
+                                        <th class="py-3 px-4">Status</th>
+                                        <th class="py-3 px-4 rounded-r-lg">Report</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-navy-deep/5">
+                                    <tr>
+                                        <td class="py-4 px-4 font-bold">12 May 2026</td>
+                                        <td class="py-4 px-4">Dr. B. Swathi</td>
+                                        <td class="py-4 px-4"><span class="bg-green-100 text-medical-green px-2 py-1 rounded-md font-bold">Completed</span></td>
+                                        <td class="py-4 px-4 text-medical-blue font-bold">Requested</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 px-4 font-bold">05 Apr 2026</td>
+                                        <td class="py-4 px-4">Dr. K. Srinivas</td>
+                                        <td class="py-4 px-4"><span class="bg-green-100 text-medical-green px-2 py-1 rounded-md font-bold">Completed</span></td>
+                                        <td class="py-4 px-4 text-slate-custom"><i class="fas fa-lock mr-1"></i> Archived</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="py-12 px-6 bg-white border-t border-navy-deep/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] text-slate-custom uppercase tracking-[0.2em]">© 2026 Swathi Hospital Kodad · Patient Portal v1.0</p>
+            <div class="flex gap-8 text-[10px] text-slate-custom font-bold uppercase tracking-widest">
+                <a href="contact.html">Support</a>
+                <a href="index.html">Terms</a>
+                <a href="index.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function showDashboard() {
+            document.getElementById('login-section').classList.add('hidden');
+            document.getElementById('dashboard-section').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

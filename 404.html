@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Swathi Hospital</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            blue: '#1B4F9B',
+                            green: '#27AE60',
+                            red: '#C0392B',
+                        },
+                        navy: {
+                            deep: '#1A1A2E',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-poppins bg-surface-light min-h-screen flex items-center justify-center p-6 text-center">
+
+    <div class="max-w-md w-full">
+        <div class="text-[12rem] font-bold text-medical-blue/10 leading-none mb-8 relative">
+            404
+            <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-heart-pulse text-6xl text-medical-red animate-pulse"></i>
+            </div>
+        </div>
+        
+        <h1 class="text-3xl font-bold text-navy-deep mb-4">Diagnosis: Page Not Found</h1>
+        <p class="text-slate-500 mb-10 leading-relaxed">It seems the page you are looking for has been moved or doesn't exist. Let's get you back to recovery.</p>
+        
+        <div class="space-y-4">
+            <a href="index.html" class="block w-full bg-medical-blue text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-xl">Return to Homepage</a>
+            <a href="contact.html" class="block w-full bg-white text-navy-deep font-bold py-4 rounded-xl border border-navy-deep/10 hover:bg-slate-50 transition-all">Contact Support</a>
+        </div>
+        
+        <div class="mt-12 text-[10px] uppercase tracking-widest text-slate-400">
+            Swathi Hospital Kodad · Emergency Line: +91 79814 90850
+        </div>
+    </div>
+
+</body>
+</html>

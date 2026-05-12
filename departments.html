@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Departments | Swathi Hospital Kodad</title>
+    <meta name="description" content="Explore the wide range of medical departments at Swathi Hospital, Kodad. Specialized care in Gynaecology, Surgery, Emergency, and more.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            blue: '#1B4F9B',
+                            green: '#27AE60',
+                            red: '#C0392B',
+                        },
+                        navy: {
+                            deep: '#1A1A2E',
+                        },
+                        slate: {
+                            custom: '#6B7280',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-merriweather bg-white text-navy-deep">
+
+    <!-- Emergency Bar -->
+    <div class="emergency-bar sticky top-0 z-[1001] w-full bg-medical-red text-white py-2 text-center text-sm font-bold shadow-md">
+        <i class="fas fa-truck-medical mr-2"></i> EMERGENCY: <a href="tel:+917981490850" class="hover:underline">+91 79814 90850</a> | Available 24x7
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-[40px] w-full z-[1000] transition-all duration-500 py-4 px-6 md:px-12 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                <div class="flex flex-col">
+                    <span class="font-poppins font-bold text-lg md:text-xl text-medical-blue">Swathi Hospital</span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-custom">Kodad · Suryapet</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden lg:flex items-center gap-8 font-poppins text-sm font-medium text-navy-deep">
+                <li><a href="index.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">About Us</a></li>
+                <li><a href="departments.html" class="text-medical-blue border-b-2 border-medical-blue pb-1">Departments</a></li>
+                <li><a href="doctors.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Doctors</a></li>
+                <li><a href="contact.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Contact</a></li>
+                <li><a href="appointment.html" class="bg-medical-blue text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:-translate-y-0.5">Book Appointment</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-navy-deep text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 bg-surface-light">
+        <div class="max-w-7xl mx-auto px-6 text-center reveal">
+            <h1 class="text-4xl md:text-6xl font-poppins font-bold text-navy-deep mb-6">Our <span class="text-medical-blue italic">Specialties</span></h1>
+            <p class="text-slate-custom max-w-2xl mx-auto leading-relaxed">Comprehensive healthcare solutions under one roof. Discover our specialized medical departments designed for your well-being.</p>
+        </div>
+    </section>
+
+    <!-- Departments Grid -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Gynaecology -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal">
+                    <div class="w-16 h-16 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">Gynaecology & Obstetrics</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Prenatal care, painless delivery, and advanced surgery for women's health issues.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-user-md mr-2 text-medical-blue"></i> Dr. B. Swathi
+                    </div>
+                    <a href="appointment.html?dept=gynaecology" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Book Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- General Medicine -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 50ms;">
+                    <div class="w-16 h-16 bg-blue-100 text-medical-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">General Medicine</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Diagnosis and treatment of fevers, infections, and chronic medical conditions.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-user-md mr-2 text-medical-blue"></i> Dr. K. Srinivas
+                    </div>
+                    <a href="appointment.html?dept=medicine" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Book Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- General Surgery -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-green-100 text-medical-green rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">General Surgery</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Expertise in hernia, appendix, and all types of minor and major surgeries.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-user-md mr-2 text-medical-blue"></i> Dr. S. Madhu
+                    </div>
+                    <a href="appointment.html?dept=surgery" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Book Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Laparoscopic Surgery -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 150ms;">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">Laparoscopic Surgery</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Minimally invasive keyhole surgeries for faster healing and less pain.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-user-md mr-2 text-medical-blue"></i> Dr. S. Madhu
+                    </div>
+                    <a href="appointment.html?dept=surgery" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Book Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Emergency Medicine -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-red-100 text-medical-red rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-truck-medical"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">Emergency Care</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">24/7 trauma care, accident response, and acute medical emergencies.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4 text-medical-red">
+                        <i class="fas fa-clock mr-2"></i> Always Available
+                    </div>
+                    <a href="emergency.html" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Paediatrics -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 250ms;">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-children"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">Paediatrics</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Specialized care for infants and children including immunizations.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-user-md mr-2 text-medical-blue"></i> On-Call Specialist
+                    </div>
+                    <a href="appointment.html?dept=paediatrics" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Book Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Diagnostics & Lab -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">Diagnostics & Lab</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Full range of blood tests, scans, and pathology services with fast reports.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-clock mr-2 text-medical-blue"></i> 24/7 Service
+                    </div>
+                    <a href="contact.html" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Nursing Care -->
+                <div class="bg-surface-light p-8 rounded-3xl border border-transparent hover:border-medical-blue/20 hover:bg-white hover:shadow-2xl transition-all duration-500 group reveal" style="transition-delay: 350ms;">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h4 class="font-poppins font-bold text-xl mb-3 text-navy-deep">Nursing & Post-Op</h4>
+                    <p class="text-slate-custom text-sm leading-relaxed mb-6">Dedicated inpatient care and post-operative recovery support by experts.</p>
+                    <div class="text-xs font-bold text-navy-deep mb-4">
+                        <i class="fas fa-shield-heart mr-2 text-medical-blue"></i> Compassionate Staff
+                    </div>
+                    <a href="about.html" class="text-medical-blue font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-deep pt-24 pb-12 border-t border-white/5">
+        <!-- Same Footer as index.html -->
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div>
+                <a href="index.html" class="flex items-center gap-3 mb-8">
+                    <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                    <span class="font-poppins font-bold text-xl text-white">Swathi Hospital</span>
+                </a>
+                <p class="text-white/40 text-sm leading-relaxed mb-8 max-w-xs">
+                    Kodad's leading multi-specialty hospital dedicated to providing world-class healthcare since 2021.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/swathi.hospital/" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-4 text-white/50 text-sm">
+                    <li><a href="index.html" class="hover:text-medical-green transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-medical-green transition-colors">About Us</a></li>
+                    <li><a href="departments.html" class="hover:text-medical-green transition-colors">Departments</a></li>
+                    <li><a href="doctors.html" class="hover:text-medical-green transition-colors">Doctors</a></li>
+                    <li><a href="contact.html" class="hover:text-medical-green transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Medical Services</h4>
+                <ul class="space-y-4 text-white/50 text-sm">
+                    <li><a href="#" class="hover:text-medical-green transition-colors">Gynaecology</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">General Medicine</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">General Surgery</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">Diagnostics & Lab</a></li>
+                    <li><a href="emergency.html" class="hover:text-medical-green transition-colors font-bold text-medical-red">Emergency Care</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Our Location</h4>
+                <div class="space-y-6 text-white/50 text-sm">
+                    <div class="flex gap-4">
+                        <i class="fas fa-map-marker-alt text-medical-green mt-1 text-lg"></i>
+                        <p>Huzur Nagar Road, Kodad, Suryapet – 508206, Telangana.<br><span class="text-xs italic">(Opposite Subbarao Gari Hospital)</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-phone-alt text-medical-green mt-1"></i>
+                        <a href="tel:+917981490850" class="hover:text-white transition-colors">+91 79814 90850</a>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-clock text-medical-green mt-1"></i>
+                        <p>Open 24 Hours · 7 Days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/20 text-xs">
+            <p>© 2026 Swathi Hospital Kodad. All Rights Reserved.</p>
+            <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full font-bold text-medical-green tracking-widest">
+                UDYAM-TS-27-0002896
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

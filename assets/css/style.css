@@ -1,0 +1,106 @@
+/* Swathi Hospital Custom Styles */
+:root {
+    --medical-blue: #1B4F9B;
+    --healing-green: #27AE60;
+    --urgent-red: #C0392B;
+    --navy-deep: #1A1A2E;
+    --slate-gray: #6B7280;
+    --surface-light: #F4F6F9;
+    --white: #FFFFFF;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--white);
+    color: var(--navy-deep);
+}
+
+h1, h2, h3, h4, h5, h6, .font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--medical-blue);
+    border-radius: 10px;
+}
+
+/* Sticky Navigation */
+nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Emergency Bar Styling */
+.emergency-bar {
+    background: var(--urgent-red);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section premium feel */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, #2c3e50 100%);
+}
+
+/* Form Styling */
+input, select, textarea {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--medical-blue);
+    box-shadow: 0 0 0 3px rgba(27, 79, 155, 0.1);
+}
+
+/* Glassmorphism effects */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Formspree AJAX States */
+form.fs-succeeded {
+    display: none !important;
+}
+
+[data-fs-success].hidden,
+[data-fs-error].hidden {
+    display: none;
+}
+
+form.fs-submitting [data-fs-submit-btn] {
+    opacity: 0.5;
+    cursor: wait;
+}

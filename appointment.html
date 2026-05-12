@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Swathi Hospital Kodad</title>
+    <meta name="description" content="Request a medical appointment online at Swathi Hospital, Kodad. Fast confirmation and priority consultation for all patients.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            blue: '#1B4F9B',
+                            green: '#27AE60',
+                            red: '#C0392B',
+                        },
+                        navy: {
+                            deep: '#1A1A2E',
+                        },
+                        slate: {
+                            custom: '#6B7280',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-merriweather bg-white text-navy-deep">
+
+    <!-- Emergency Bar -->
+    <div class="emergency-bar sticky top-0 z-[1001] w-full bg-medical-red text-white py-2 text-center text-sm font-bold shadow-md">
+        <i class="fas fa-truck-medical mr-2"></i> EMERGENCY: <a href="tel:+917981490850" class="hover:underline">+91 79814 90850</a> | Available 24x7
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-[40px] w-full z-[1000] transition-all duration-500 py-4 px-6 md:px-12 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                <div class="flex flex-col">
+                    <span class="font-poppins font-bold text-lg md:text-xl text-medical-blue">Swathi Hospital</span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-custom">Kodad · Suryapet</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden lg:flex items-center gap-8 font-poppins text-sm font-medium text-navy-deep">
+                <li><a href="index.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">About Us</a></li>
+                <li><a href="departments.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Departments</a></li>
+                <li><a href="doctors.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Doctors</a></li>
+                <li><a href="contact.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Contact</a></li>
+                <li><a href="appointment.html" class="bg-medical-blue text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:-translate-y-0.5">Book Appointment</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-navy-deep text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 bg-surface-light">
+        <div class="max-w-7xl mx-auto px-6 text-center reveal">
+            <h1 class="text-4xl md:text-6xl font-poppins font-bold text-navy-deep mb-6">Book Your <span class="text-medical-blue italic">Visit</span></h1>
+            <p class="text-slate-custom max-w-2xl mx-auto leading-relaxed">Fill out the form below to request an appointment. Our team will contact you shortly to confirm your preferred time slot.</p>
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Side Info -->
+                <div class="lg:col-span-1 space-y-8 reveal">
+                    <div class="bg-medical-blue/5 p-8 rounded-3xl border border-medical-blue/10">
+                        <h3 class="font-poppins font-bold text-xl text-medical-blue mb-4">Need Help?</h3>
+                        <p class="text-slate-custom text-sm mb-6">Call our reception for instant appointment booking over the phone.</p>
+                        <a href="tel:+917981490850" class="text-medical-blue font-bold flex items-center gap-2">
+                            <i class="fas fa-phone-alt"></i> +91 79814 90850
+                        </a>
+                    </div>
+
+                    <div class="bg-green-500/5 p-8 rounded-3xl border border-green-500/10">
+                        <h3 class="font-poppins font-bold text-xl text-green-600 mb-4">WhatsApp Us</h3>
+                        <p class="text-slate-custom text-sm mb-6">Send a quick message on WhatsApp for appointments.</p>
+                        <a href="https://wa.me/917981490850" class="text-green-600 font-bold flex items-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="bg-navy-deep p-8 rounded-3xl text-white">
+                        <h4 class="font-poppins font-bold mb-4">Working Hours</h4>
+                        <div class="space-y-3 text-sm text-white/60">
+                            <div class="flex justify-between">
+                                <span>Mon - Sun</span>
+                                <span class="text-medical-green font-bold text-xs uppercase">24 Hours Open</span>
+                            </div>
+                            <div class="border-t border-white/10 pt-3">
+                                <span>Emergency</span>
+                                <span class="text-medical-red font-bold text-xs uppercase">Available 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-2 reveal">
+                    <form action="https://formspree.io/f/mkoyyvpb" method="POST" id="appointment-form" class="space-y-6 p-8 md:p-12 bg-white rounded-[2.5rem] shadow-2xl border border-navy-deep/5">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Patient Full Name <span class="text-medical-red">*</span></label>
+                                <input type="text" name="name" placeholder="E.g. John Doe" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" required data-fs-field>
+                                <span class="text-[10px] text-medical-red mt-1" data-fs-error="name"></span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Mobile Number <span class="text-medical-red">*</span></label>
+                                <input type="tel" name="phone" placeholder="E.g. 98765 43210" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" required data-fs-field>
+                                <span class="text-[10px] text-medical-red mt-1" data-fs-error="phone"></span>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Email Address</label>
+                                <input type="email" name="email" placeholder="E.g. john@example.com" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" data-fs-field>
+                                <span class="text-[10px] text-medical-red mt-1" data-fs-error="email"></span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Department <span class="text-medical-red">*</span></label>
+                                <select name="department" id="dept-select" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" required data-fs-field>
+                                    <option value="">Select Department</option>
+                                    <option value="gynaecology">Gynaecology & Obstetrics</option>
+                                    <option value="medicine">General Medicine</option>
+                                    <option value="surgery">Laparoscopic Surgery</option>
+                                    <option value="paediatrics">Paediatrics</option>
+                                    <option value="nursing">Nursing Care</option>
+                                </select>
+                                <span class="text-[10px] text-medical-red mt-1" data-fs-error="department"></span>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Preferred Doctor</label>
+                                <select name="doctor" id="doctor-select" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" data-fs-field>
+                                    <option value="">Any Available Doctor</option>
+                                    <option value="madhu">Dr. S. Madhu (Surgery)</option>
+                                    <option value="swathi">Dr. B. Swathi (Gynaecology)</option>
+                                    <option value="srinivas">Dr. K. Srinivas (Medicine)</option>
+                                </select>
+                                <span class="text-[10px] text-medical-red mt-1" data-fs-error="doctor"></span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Preferred Date <span class="text-medical-red">*</span></label>
+                                <input type="date" name="date" class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" required data-fs-field>
+                                <span class="text-[10px] text-medical-red mt-1" data-fs-error="date"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Preferred Time Slot <span class="text-medical-red">*</span></label>
+                            <div class="grid grid-cols-3 gap-4">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="time" value="morning" class="hidden peer" required>
+                                    <div class="text-center py-3 border-2 border-transparent bg-surface-light rounded-xl peer-checked:border-medical-blue peer-checked:bg-blue-50 text-xs font-bold transition-all">Morning</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="time" value="afternoon" class="hidden peer">
+                                    <div class="text-center py-3 border-2 border-transparent bg-surface-light rounded-xl peer-checked:border-medical-blue peer-checked:bg-blue-50 text-xs font-bold transition-all">Afternoon</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="time" value="evening" class="hidden peer">
+                                    <div class="text-center py-3 border-2 border-transparent bg-surface-light rounded-xl peer-checked:border-medical-blue peer-checked:bg-blue-50 text-xs font-bold transition-all">Evening</div>
+                                </label>
+                            </div>
+                            <span class="text-[10px] text-medical-red mt-1" data-fs-error="time"></span>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-custom mb-2 ml-1">Reason / Notes</label>
+                            <textarea name="message" rows="4" placeholder="Briefly describe your symptoms or reason for visit..." class="w-full bg-surface-light border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-medical-blue transition-all" data-fs-field></textarea>
+                            <span class="text-[10px] text-medical-red mt-1" data-fs-error="message"></span>
+                        </div>
+
+                        <button type="submit" data-fs-submit-btn class="w-full bg-medical-blue text-white font-poppins font-bold py-5 rounded-2xl hover:bg-blue-700 transition-all shadow-xl hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed">Confirm Booking Request</button>
+                        <div class="text-[10px] text-center text-medical-red" data-fs-error></div>
+                        <p class="text-[10px] text-center text-slate-custom">By submitting, you agree to our terms of service regarding medical data handling.</p>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="success-msg" class="hidden p-12 text-center bg-white rounded-[3rem] shadow-2xl border-2 border-medical-green/20 reveal" data-fs-success>
+                        <div class="w-24 h-24 bg-green-100 text-medical-green rounded-full flex items-center justify-center text-5xl mx-auto mb-8 animate-bounce">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3 class="text-3xl font-poppins font-bold text-navy-deep mb-4">Request Received!</h3>
+                        <p class="text-slate-custom mb-8">Thank you for choosing Swathi Hospital. Our reception team will call you at your provided number within 30 minutes to confirm your slot.</p>
+                        <a href="index.html" class="bg-medical-blue text-white px-8 py-3 rounded-xl font-bold">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-deep pt-24 pb-12 border-t border-white/5">
+        <!-- Same Footer -->
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div>
+                <a href="index.html" class="flex items-center gap-3 mb-8">
+                    <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                    <span class="font-poppins font-bold text-xl text-white">Swathi Hospital</span>
+                </a>
+                <p class="text-white/40 text-sm leading-relaxed mb-8 max-w-xs">
+                    Kodad's leading multi-specialty hospital dedicated to providing world-class healthcare since 2021.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/swathi.hospital/" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-4 text-white/50 text-sm">
+                    <li><a href="index.html" class="hover:text-medical-green transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-medical-green transition-colors">About Us</a></li>
+                    <li><a href="departments.html" class="hover:text-medical-green transition-colors">Departments</a></li>
+                    <li><a href="doctors.html" class="hover:text-medical-green transition-colors">Doctors</a></li>
+                    <li><a href="contact.html" class="hover:text-medical-green transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Medical Services</h4>
+                <ul class="space-y-4 text-white/50 text-sm">
+                    <li><a href="#" class="hover:text-medical-green transition-colors">Gynaecology</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">General Medicine</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">General Surgery</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">Diagnostics & Lab</a></li>
+                    <li><a href="emergency.html" class="hover:text-medical-green transition-colors font-bold text-medical-red">Emergency Care</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Our Location</h4>
+                <div class="space-y-6 text-white/50 text-sm">
+                    <div class="flex gap-4">
+                        <i class="fas fa-map-marker-alt text-medical-green mt-1 text-lg"></i>
+                        <p>Huzur Nagar Road, Kodad, Suryapet – 508206, Telangana.<br><span class="text-xs italic">(Opposite Subbarao Gari Hospital)</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-phone-alt text-medical-green mt-1"></i>
+                        <a href="tel:+917981490850" class="hover:text-white transition-colors">+91 79814 90850</a>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-clock text-medical-green mt-1"></i>
+                        <p>Open 24 Hours · 7 Days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/20 text-xs">
+            <p>© 2026 Swathi Hospital Kodad. All Rights Reserved.</p>
+            <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full font-bold text-medical-green tracking-widest">
+                UDYAM-TS-27-0002896
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Handle URL parameters for pre-filling the form
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const dept = urlParams.get('dept');
+            const doctor = urlParams.get('doctor');
+
+            if (dept) {
+                const deptSelect = document.getElementById('dept-select');
+                if (deptSelect) deptSelect.value = dept;
+            }
+
+            if (doctor) {
+                const doctorSelect = document.getElementById('doctor-select');
+                if (doctorSelect) doctorSelect.value = doctor;
+            }
+        });
+
+        // Formspree Integration
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#appointment-form', formId: 'mkoyyvpb' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>

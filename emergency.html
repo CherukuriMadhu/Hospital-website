@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Care 24/7 | Swathi Hospital Kodad</title>
+    <meta name="description" content="24/7 Emergency and Trauma care at Swathi Hospital, Kodad. Immediate response for accidents, cardiac care, and obstetric emergencies. Call now.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            blue: '#1B4F9B',
+                            green: '#27AE60',
+                            red: '#C0392B',
+                        },
+                        navy: {
+                            deep: '#1A1A2E',
+                        },
+                        slate: {
+                            custom: '#6B7280',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-merriweather bg-white text-navy-deep">
+
+    <!-- Emergency Bar -->
+    <div class="emergency-bar sticky top-0 z-[1001] w-full bg-medical-red text-white py-2 text-center text-sm font-bold shadow-md">
+        <i class="fas fa-truck-medical mr-2"></i> EMERGENCY: <a href="tel:+917981490850" class="hover:underline">+91 79814 90850</a> | Available 24x7
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-[40px] w-full z-[1000] transition-all duration-500 py-4 px-6 md:px-12 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                <div class="flex flex-col">
+                    <span class="font-poppins font-bold text-lg md:text-xl text-medical-blue">Swathi Hospital</span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-custom">Kodad · Suryapet</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden lg:flex items-center gap-8 font-poppins text-sm font-medium text-navy-deep">
+                <li><a href="index.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">About Us</a></li>
+                <li><a href="departments.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Departments</a></li>
+                <li><a href="doctors.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Doctors</a></li>
+                <li><a href="contact.html" class="hover:text-medical-blue transition-colors border-b-2 border-transparent hover:border-medical-blue pb-1">Contact</a></li>
+                <li><a href="appointment.html" class="bg-medical-blue text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:-translate-y-0.5">Book Appointment</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-navy-deep text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 bg-medical-red relative overflow-hidden text-white">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10 reveal">
+            <div class="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-white text-xs font-bold tracking-widest uppercase mb-6 animate-pulse">
+                <i class="fas fa-circle text-white"></i> Live Response Team Active
+            </div>
+            <h1 class="text-4xl md:text-7xl font-poppins font-bold mb-6">24/7 Emergency <br><span class="italic font-normal">Medical Support</span></h1>
+            <p class="text-white/80 max-w-2xl mx-auto leading-relaxed text-lg mb-10">Seconds matter in an emergency. Our trauma team and advanced life support are ready to respond 24 hours a day, 365 days a year.</p>
+            
+            <a href="tel:+917981490850" class="inline-flex items-center gap-4 bg-white text-medical-red px-10 py-6 rounded-[2rem] font-poppins font-bold text-2xl md:text-3xl shadow-2xl hover:scale-105 transition-transform group">
+                <i class="fas fa-phone-alt animate-bounce"></i> +91 79814 90850
+            </a>
+        </div>
+    </section>
+
+    <!-- Emergency Services -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Trauma Care -->
+                <div class="p-10 rounded-[3rem] bg-surface-light border-b-8 border-medical-red reveal">
+                    <div class="text-5xl text-medical-red mb-8"><i class="fas fa-user-injured"></i></div>
+                    <h3 class="font-poppins font-bold text-2xl text-navy-deep mb-6">Trauma & Accident</h3>
+                    <p class="text-slate-custom leading-relaxed mb-8">Immediate surgical and medical intervention for accident victims and acute trauma cases with 24/7 OT availability.</p>
+                    <ul class="space-y-3 text-sm font-bold text-navy-deep">
+                        <li><i class="fas fa-check text-medical-red mr-2"></i> Multi-Specialty Surgeon</li>
+                        <li><i class="fas fa-check text-medical-red mr-2"></i> Advanced Life Support</li>
+                        <li><i class="fas fa-check text-medical-red mr-2"></i> 24/7 Blood Bank Access</li>
+                    </ul>
+                </div>
+
+                <!-- Obstetric Emergency -->
+                <div class="p-10 rounded-[3rem] bg-surface-light border-b-8 border-pink-500 reveal" style="transition-delay: 100ms;">
+                    <div class="text-5xl text-pink-500 mb-8"><i class="fas fa-baby-carriage"></i></div>
+                    <h3 class="font-poppins font-bold text-2xl text-navy-deep mb-6">Obstetric Emergency</h3>
+                    <p class="text-slate-custom leading-relaxed mb-8">Specialized gynaecological emergency care for pregnancy complications and immediate delivery needs.</p>
+                    <ul class="space-y-3 text-sm font-bold text-navy-deep">
+                        <li><i class="fas fa-check text-pink-500 mr-2"></i> Gynaecologist Available</li>
+                        <li><i class="fas fa-check text-pink-500 mr-2"></i> Emergency C-Section</li>
+                        <li><i class="fas fa-check text-pink-500 mr-2"></i> Neonatal Care Support</li>
+                    </ul>
+                </div>
+
+                <!-- Surgical Emergency -->
+                <div class="p-10 rounded-[3rem] bg-surface-light border-b-8 border-medical-blue reveal" style="transition-delay: 200ms;">
+                    <div class="text-5xl text-medical-blue mb-8"><i class="fas fa-kit-medical"></i></div>
+                    <h3 class="font-poppins font-bold text-2xl text-navy-deep mb-6">Surgical Emergency</h3>
+                    <p class="text-slate-custom leading-relaxed mb-8">Acute surgical conditions like appendicitis, hernia strangulation, or internal bleeding managed by experts.</p>
+                    <ul class="space-y-3 text-sm font-bold text-navy-deep">
+                        <li><i class="fas fa-check text-medical-blue mr-2"></i> Laparoscopic Option</li>
+                        <li><i class="fas fa-check text-medical-blue mr-2"></i> Expert Anaesthesia</li>
+                        <li><i class="fas fa-check text-medical-blue mr-2"></i> ICU Post-Op Care</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="py-24 bg-navy-deep text-white">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h2 class="text-medical-red font-poppins font-bold tracking-widest uppercase text-sm mb-3">What to do?</h2>
+                <h3 class="text-4xl font-poppins font-bold mb-8">Emergency <span class="italic text-medical-red font-normal">Checklist</span></h3>
+                <div class="space-y-6">
+                    <div class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-medical-red flex items-center justify-center font-bold shrink-0">1</div>
+                        <p class="text-white/70 leading-relaxed"><span class="text-white font-bold">Stay Calm & Call:</span> Immediately dial our emergency number <span class="text-white">+91 79814 90850</span>.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-medical-red flex items-center justify-center font-bold shrink-0">2</div>
+                        <p class="text-white/70 leading-relaxed"><span class="text-white font-bold">Provide Location:</span> Clearly state your location if requesting an ambulance or directions.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-medical-red flex items-center justify-center font-bold shrink-0">3</div>
+                        <p class="text-white/70 leading-relaxed"><span class="text-white font-bold">Medical History:</span> Keep existing medical files or medicine names ready for the doctors.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-medical-red flex items-center justify-center font-bold shrink-0">4</div>
+                        <p class="text-white/70 leading-relaxed"><span class="text-white font-bold">Reach Fast:</span> If driving, follow the directions to Huzur Nagar Road, Kodad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 p-12 rounded-[3rem] border border-white/10 reveal">
+                <h4 class="font-poppins font-bold text-2xl mb-8">Our Ambulance Service</h4>
+                <div class="flex items-center gap-6 mb-10">
+                    <div class="w-20 h-20 bg-medical-blue/20 rounded-2xl flex items-center justify-center text-4xl text-medical-blue shadow-lg">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs uppercase tracking-widest text-white/50 mb-1">Ambulance Hotline</div>
+                        <a href="tel:+917981490850" class="text-2xl font-bold hover:text-medical-blue transition-colors">+91 79814 90850</a>
+                    </div>
+                </div>
+                <p class="text-white/40 text-sm italic mb-8">"Equipped with oxygen, life-support monitors, and emergency medications to stabilize patients during transit."</p>
+                <a href="https://maps.google.com/?q=Swathi+Hospital+Kodad" target="_blank" class="block w-full bg-white text-navy-deep text-center font-bold py-4 rounded-xl hover:bg-medical-blue hover:text-white transition-all shadow-xl">
+                    Open Navigation <i class="fas fa-location-arrow ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-deep pt-24 pb-12 border-t border-white/5">
+        <!-- Same Footer -->
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div>
+                <a href="index.html" class="flex items-center gap-3 mb-8">
+                    <div class="bg-gradient-to-br from-medical-blue to-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white font-poppins font-bold text-xl shadow-lg">S</div>
+                    <span class="font-poppins font-bold text-xl text-white">Swathi Hospital</span>
+                </a>
+                <p class="text-white/40 text-sm leading-relaxed mb-8 max-w-xs">
+                    Kodad's leading multi-specialty hospital dedicated to providing world-class healthcare since 2021.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/swathi.hospital/" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-medical-blue hover:text-white transition-all"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-4 text-white/50 text-sm">
+                    <li><a href="index.html" class="hover:text-medical-green transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-medical-green transition-colors">About Us</a></li>
+                    <li><a href="departments.html" class="hover:text-medical-green transition-colors">Departments</a></li>
+                    <li><a href="doctors.html" class="hover:text-medical-green transition-colors">Doctors</a></li>
+                    <li><a href="contact.html" class="hover:text-medical-green transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Medical Services</h4>
+                <ul class="space-y-4 text-white/50 text-sm">
+                    <li><a href="#" class="hover:text-medical-green transition-colors">Gynaecology</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">General Medicine</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">General Surgery</a></li>
+                    <li><a href="#" class="hover:text-medical-green transition-colors">Diagnostics & Lab</a></li>
+                    <li><a href="emergency.html" class="hover:text-medical-green transition-colors font-bold text-medical-red">Emergency Care</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-poppins font-bold text-white mb-8 uppercase tracking-widest text-sm">Our Location</h4>
+                <div class="space-y-6 text-white/50 text-sm">
+                    <div class="flex gap-4">
+                        <i class="fas fa-map-marker-alt text-medical-green mt-1 text-lg"></i>
+                        <p>Huzur Nagar Road, Kodad, Suryapet – 508206, Telangana.<br><span class="text-xs italic">(Opposite Subbarao Gari Hospital)</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-phone-alt text-medical-green mt-1"></i>
+                        <a href="tel:+917981490850" class="hover:text-white transition-colors">+91 79814 90850</a>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-clock text-medical-green mt-1"></i>
+                        <p>Open 24 Hours · 7 Days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/20 text-xs">
+            <p>© 2026 Swathi Hospital Kodad. All Rights Reserved.</p>
+            <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full font-bold text-medical-green tracking-widest">
+                UDYAM-TS-27-0002896
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
